@@ -1,4 +1,4 @@
-window.alert("Hello! I am an alert box!!");
+
 var gameObj = {
     points: {
         score: 0,
