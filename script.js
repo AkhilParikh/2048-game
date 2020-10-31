@@ -42,7 +42,7 @@ var gameObj = {
                 var domBox = document.createElement('span');
                 domBox.innerText = num;
                 domBox.textContent = num;
-                domBox.className = 'row' + obj.position[0] + ' ' + 'cell' + obj.position[1] + ' ' + 'num' + num;
+                domBox.className = 'grid row' + obj.position[0] + ' ' + 'cell' + obj.position[1] + ' ' + 'num num' + num;
                 var root = document.getElementById('stage');
                 root.appendChild(domBox);
                 return  domBox;
@@ -83,7 +83,7 @@ var gameObj = {
     },
     moveTo :function (obj1, obj2) {
             obj2.boxObj = obj1.boxObj;
-            obj2.boxObj.domObj.className = 'row' + obj2.position[0] + ' ' + 'cell' + obj2.position[1] + ' ' + 'num' + obj2.boxObj.value;
+            obj2.boxObj.domObj.className = 'grid row' + obj2.position[0] + ' ' + 'cell' + obj2.position[1] + ' ' + 'num num' + obj2.boxObj.value;
 //            obj1.boxObj.domObj.parentNode.removeChild(obj1.boxObj.domObj);
             obj1.boxObj = null;
         },
@@ -92,7 +92,7 @@ var gameObj = {
             obj2.boxObj = obj1.boxObj;
             obj1.boxObj = null;
             obj2.boxObj.value = obj2.boxObj.value * 2;
-            obj2.boxObj.domObj.className = 'row' + obj2.position[0] + ' ' + 'cell' + obj2.position[1] + ' ' + 'num' + obj2.boxObj.value;
+            obj2.boxObj.domObj.className = 'grid row' + obj2.position[0] + ' ' + 'cell' + obj2.position[1] + ' ' + 'num num' + obj2.boxObj.value;
             obj2.boxObj.domObj.innerText = obj2.boxObj.value;
             obj2.boxObj.domObj.textContent = obj2.boxObj.value;
             this.points.score+=obj2.boxObj.value;
